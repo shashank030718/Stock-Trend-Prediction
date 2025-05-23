@@ -1,29 +1,36 @@
-# 📈 Stock Trend Prediction 
+# 📈 Stock Trend Prediction App
 
-This Flask-based application predicts stock prices using a deep learning model (LSTM).  
-It processes **real-time stock data from January 2000 to May 2025** and visualizes trends using Exponential Moving Averages (EMAs).
+A web app built with **Streamlit**, **TensorFlow**, and **yfinance** to visualize and predict stock trends using a deep learning model (LSTM). The app provides insights via exponential moving averages and compares original vs predicted closing prices.
 
-![Stock Prediction](static/stock_prediction.png)
-
----
+🔗 **Live App:** [Streamlit Deployment](https://stock-trend-prediction-tcxuwxiww9zki2rzivrzms.streamlit.app/)
 
 ## 🚀 Features
+- Predict future stock trends using a trained LSTM model.
+- Visualize EMAs: 20, 50, 100, and 200-day trends.
+- Compare actual vs predicted stock prices.
+- Download historical stock data as a CSV file.
 
-- 📉 Stock price prediction using an LSTM model
-- 📊 Visualizations:
-  - Closing price + EMA 20/50
-  - Closing price + EMA 100/200
-  - Predicted vs. Actual price trends
-- 📤 Downloadable stock dataset as CSV
-- 🧠 Pretrained LSTM model loaded via Keras
-
----
-
-## 🛠️ Tech Stack
-
-- Python (Flask, NumPy, Pandas, Matplotlib)
+## 📦 Tech Stack
+- Python
+- Streamlit
 - TensorFlow / Keras
-- yFinance API
-- HTML5 + Bootstrap for UI
+- yfinance
+- scikit-learn
+- matplotlib
+
+## 🧠 Model
+The model is a deep learning LSTM network trained on historical stock price data to forecast closing prices based on the last 100 days of trends.
+
+## 📸 Screenshots
+![EMA Chart](static/ema_20_50.png)
+![Prediction Chart](static/stock_prediction.png)
+
+## 📂 Setup
+
+```bash
+git clone https://github.com/yourusername/stock-trend-prediction
+cd stock-trend-prediction
+pip install -r requirements.txt
+streamlit run app.py
 
 
